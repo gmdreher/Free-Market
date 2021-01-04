@@ -1,0 +1,7 @@
+.listProdu {
+    display: grid;
+    grid-row-gap: 2.3em;
+    grid-template-columns:auto;
+    justify-content: center;
+    padding: 4em 2em;
+}
