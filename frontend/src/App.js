@@ -8,7 +8,10 @@ import Category from './components/Category.jsx';
 import { createStore } from 'redux';
 
 const initialState = {
-  listProduct: []
+  listProduct: [],
+  listProductByName: [],
+  productFilterByCategory: [],
+  filterByCategory: ''
 }
 
 function reducer(state, action) {
@@ -20,6 +23,11 @@ function reducer(state, action) {
         ...state,
         listProduct: action.payload
       }
+    }
+    case 'PRODUCT_BY_NAME': {
+      const listProductByName = (state.listProduct || [])
+        .filter(data => data.title.toLowerCase().includes(action.payload.toLowerCase()))
+      return { ...state, listProductByName }
     }
     default: {
       return state
