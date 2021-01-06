@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Product from './Product.jsx';
 import './ListProduct.css';
 import { useSelector, useDispatch } from 'react-redux';
@@ -7,8 +7,10 @@ export default function ListProduct() {
 
     const dispatch = useDispatch();
     const listProduct = useSelector((state) => state.listProduct);
+    console.log("El estado de state es", listProduct);
 
     useEffect(() => {
+
         fetch('https://api.mercadolibre.com/sites/MLA/search?q={query}')
             .then((response) => {
                 return response.json()
@@ -16,9 +18,10 @@ export default function ListProduct() {
             .then((list) => {
                 dispatch({
                     type: 'LIST_PRODUCT',
-                    payload: list
+                    payload: list.results
                 })
-                console.log(list.length);
+                // setListProduct(list.results);
+                console.log(list.results.length);
             })
             .catch(() => {
                 console.log('error');
@@ -28,7 +31,7 @@ export default function ListProduct() {
     return (
         <div className="listProdu">
             {
-                listProduct.results.map(function (prop) {
+                listProduct.map(function (prop) {
                     return <Product product={prop} />
                 })
             }

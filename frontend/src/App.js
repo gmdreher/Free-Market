@@ -3,9 +3,31 @@ import SearchBar from './components/SearchBar.jsx';
 import { Provider } from 'react-redux';
 import './index.css';
 import ListProduct from './components/ListProduct.jsx';
-import store from './store.js';
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import Category from './components/Category.jsx';
+import { createStore } from 'redux';
+
+const initialState = {
+  listProduct: []
+}
+
+function reducer(state, action) {
+  console.log(action);
+  switch (action.type) {
+    case 'LIST_PRODUCT': {
+      console.log("Lista de productos");
+      return {
+        ...state,
+        listProduct: action.payload
+      }
+    }
+    default: {
+      return state
+    }
+  }
+}
+
+const store = createStore(reducer, initialState)
 
 function App() {
   return (
