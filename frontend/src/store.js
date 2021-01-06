@@ -2,7 +2,8 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 
 const initialState = {
-    listProduct: []
+    listProduct: [],
+    categorylist: []
 };
 
 function reducer(state, action) {
@@ -13,6 +14,12 @@ function reducer(state, action) {
             return {
                 ...state,
                 listProduct: action.payload
+            }
+        }
+        case 'LIST_CATEGORY': {
+            return {
+                ...state,
+                categorylist: action.payload
             }
         }
 
