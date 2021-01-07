@@ -5,7 +5,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 export default function Product({ product }) {
     const history = useHistory();
     function handleClick() {
-        history.push(`/products/${product.title}`)
+        history.push(`/products/${product.title.toLowerCase()}`)
     }
 
     return (

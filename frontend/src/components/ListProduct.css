@@ -1,10 +1,8 @@
 .listProdu {
     display: grid;
     grid-row-gap: 2.3em;
-    /* grid-auto-flow: column; */
     grid-column-gap: 75px;
     grid-template-columns: repeat(auto-fill, 260px);
-    /* grid-template-columns:auto; */
     justify-content: center;
     padding: 2em 0;
 }
