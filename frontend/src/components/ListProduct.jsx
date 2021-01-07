@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Product from './Product.jsx';
 import './ListProduct.css';
 import { useSelector, useDispatch } from 'react-redux';
+import Container from '../container/Container.jsx';
 
 export default function ListProduct() {
 
-    const [inputValue, setInputValue] = useState('')
     const dispatch = useDispatch();
     const listProductByName = useSelector((state) => state.listProductByName);
 
@@ -18,7 +18,6 @@ export default function ListProduct() {
         }
         return state.listProduct;
     })
-    // console.log("El estado de state es", listProduct);
 
     useEffect(() => {
 
@@ -31,45 +30,24 @@ export default function ListProduct() {
                     type: 'LIST_PRODUCT',
                     payload: list.results
                 })
-                // setListProduct(list.results);
                 console.log(list.results.length);
+                console.log("DATOS DE LISTPRODUCT:", list.results);
+
             })
             .catch(() => {
                 console.log('error');
             })
     }, [dispatch])
 
-    const filterByName = (e) => {
-        setInputValue(e.target.value)
-        dispatch({
-            type: 'PRODUCT_BY_NAME',
-            payload: e.target.value
-        })
-    }
-    const clearInput = () => {
-        dispatch({
-            type: 'PRODUCT_BY_NAME',
-            payload: ''
-        })
-        setInputValue('')
-    }
-
     return (
-        <div className="listProdu">
-            <input type="text" value={inputValue} onChange={filterByName} />
-            {
-                inputValue &&
-                <button onClick={clearInput}>X</button>
-            }
-            {
-                listProductByName.length === 0 && inputValue &&
-                <p><strong>{inputValue}</strong> No existe </p>
-            }
-            {
-                listProduct.map(function (prop) {
-                    return <Product product={prop} />
-                })
-            }
-        </div>
+        <Container>
+            <div className="listProdu">
+                {
+                    listProduct.map(function (prop) {
+                        return <Product product={prop} />
+                    })
+                }
+            </div>
+        </Container>
     )
 }

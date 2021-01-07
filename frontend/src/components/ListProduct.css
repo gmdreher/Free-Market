@@ -1,7 +1,10 @@
 .listProdu {
     display: grid;
     grid-row-gap: 2.3em;
-    grid-template-columns:auto;
+    /* grid-auto-flow: column; */
+    grid-column-gap: 75px;
+    grid-template-columns: repeat(auto-fill, 260px);
+    /* grid-template-columns:auto; */
     justify-content: center;
-    padding: 4em 2em;
+    padding: 2em 0;
 }

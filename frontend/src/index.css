@@ -38,14 +38,14 @@ code {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;   
 }
 
 header {
   grid-area: header;
   background-color: #003bdd;
-  /*transition-property: color;*/
+  box-shadow: 0 2px 4px 0 rgba(0,0,0, .06);
 }
 
 main{
@@ -74,20 +74,19 @@ a.brand {
   padding: 2rem;
 }
 
-a.brand:hover {
+a {
+  text-decoration: none;
+}
+
+/* a.brand:hover {
   color: #cfcfcf;
   }
-  
+   */
 
-.searchbar {
+/* .searchbar {
 display: flex;
 justify-content: center;
-}
+} */
 
-.seeker {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;   
-}
+
 
