@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Labs-Challenge/static/css/main.3edbbc10.chunk.css",
+    "main.js": "/Labs-Challenge/static/js/main.9c4509e9.chunk.js",
+    "main.js.map": "/Labs-Challenge/static/js/main.9c4509e9.chunk.js.map",
+    "runtime-main.js": "/Labs-Challenge/static/js/runtime-main.f3507428.js",
+    "runtime-main.js.map": "/Labs-Challenge/static/js/runtime-main.f3507428.js.map",
+    "static/js/2.c7f56f63.chunk.js": "/Labs-Challenge/static/js/2.c7f56f63.chunk.js",
+    "static/js/2.c7f56f63.chunk.js.map": "/Labs-Challenge/static/js/2.c7f56f63.chunk.js.map",
+    "static/js/3.7efcf6b6.chunk.js": "/Labs-Challenge/static/js/3.7efcf6b6.chunk.js",
+    "static/js/3.7efcf6b6.chunk.js.map": "/Labs-Challenge/static/js/3.7efcf6b6.chunk.js.map",
+    "index.html": "/Labs-Challenge/index.html",
+    "static/css/main.3edbbc10.chunk.css.map": "/Labs-Challenge/static/css/main.3edbbc10.chunk.css.map",
+    "static/js/2.c7f56f63.chunk.js.LICENSE.txt": "/Labs-Challenge/static/js/2.c7f56f63.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3507428.js",
+    "static/js/2.c7f56f63.chunk.js",
+    "static/css/main.3edbbc10.chunk.css",
+    "static/js/main.9c4509e9.chunk.js"
+  ]
+}
