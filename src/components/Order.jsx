@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+
 
 const OrderStyled = styled.select`
     padding: 1em; 
@@ -10,12 +12,23 @@ const OrderStyled = styled.select`
 `
 export default function Order() {
 
+    const listProduct = useSelector((state) => state.listProduct);
+    console.log("Orden", listProduct.sort());
+
+    function onChangeAscend() {
+
+    }
+
+    function onChangeDescend() {
+
+    }
+
     return (
         <div className="order" >
             <OrderStyled>
                 <option value="">Ordenar por precio</option>
-                <option value="Ascendente">Ascendente</option>
-                <option value="Descendente">Descendente</option>
+                <option onChange={onChangeAscend} value="Ascendente">Ascendente</option>
+                <option onChange={onChangeDescend} value="Descendente">Descendente</option>
             </OrderStyled>
         </div>
     );

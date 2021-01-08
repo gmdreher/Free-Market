@@ -1,6 +1,6 @@
 import React from 'react';
 import './Product.css';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function Product({ product }) {
     const history = useHistory();
