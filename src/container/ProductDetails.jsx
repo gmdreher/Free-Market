@@ -6,7 +6,7 @@ import './ProductDetails.css';
 
 
 export default function ProductDetails({ match, history }) {
-    const listProduct = useSelector((state) => state.listProduct.find(a => a.title.toLowerCase() === match.params.id));
+    const listProduct = useSelector((state) => state.product.listProduct.find(a => a.title.toLowerCase() === match.params.id));
     console.log("detlle", listProduct);
     console.log(match.params.id)
 

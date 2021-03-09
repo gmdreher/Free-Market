@@ -1,8 +1,6 @@
 import React from 'react';
 import Container from '../container/Container.jsx';
 import Search from './Search.jsx';
-import Category from './Category.jsx';
-import Order from './Order.jsx';
 import styled from 'styled-components';
 
 const FilterStyled = styled.div`
@@ -27,8 +25,6 @@ export default function Filter() {
                 <div className="grid">
                     <Search />
                     <span></span>
-                    <Category />
-                    <Order />
                 </div>
             </Container>
         </FilterStyled>

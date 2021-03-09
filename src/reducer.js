@@ -1,29 +1,27 @@
-export default function reducer(state, action) {
+const initialState = {
+    listProduct: [],
+    listProductByName: [],
+    productFilterByCategory: [],
+    filterByCategory: ''
+}
+
+
+export default (state = initialState, action) => {
     console.log(action);
     switch (action.type) {
+
         case 'LIST_PRODUCT': {
-            console.log("Lista de productos");
+            console.log("Lista de productos", action.payload);
             return {
                 ...state,
                 listProduct: action.payload
             }
         }
+
         case 'PRODUCT_BY_NAME': {
             const listProductByName = (state.listProduct || [])
                 .filter(data => data.title.toLowerCase().includes(action.payload.toLowerCase()))
             return { ...state, listProductByName }
-        }
-
-        case 'FILTER_BY_CATEGORY': {
-            const { categ } = action.payload;
-
-            if ('' === categ) {
-                return { ...state, productFilterByCategory: [], filterByCategory: '', };
-            }
-
-            const productFilterByCategory = state.listProduct.filter((data) => data.available_filters === categ);
-
-            return { ...state, productFilterByCategory, filterByCategory: categ }
         }
 
         default: {

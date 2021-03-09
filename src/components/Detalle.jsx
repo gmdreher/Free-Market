@@ -12,7 +12,7 @@ export default function Detalle({ title, price, thumbnail, condition, attributes
                 <p><strong>Condición: </strong>{condition}</p>
                 <p><strong>Stock: </strong>{sold_quantity}</p>
                 <p><strong>Precio: </strong> ${price}</p>
-                <p><strong>Modelo: </strong> {attributes[2].value_name}</p>
+                <p><strong>Modelo: </strong> {title}</p>
             </div>
         </div>
     );

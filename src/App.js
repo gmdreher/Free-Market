@@ -3,19 +3,10 @@ import { Provider } from 'react-redux';
 import './index.css';
 import ListProduct from './components/ListProduct.jsx';
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import { createStore } from 'redux';
-import reducer from './reducer.js';
 import Filter from './components/Filter.jsx';
 import ProductDetails from './container/ProductDetails.jsx';
+import store from './store.js';
 
-const initialState = {
-  listProduct: [],
-  listProductByName: [],
-  productFilterByCategory: [],
-  filterByCategory: ''
-}
-
-const store = createStore(reducer, initialState)
 
 function App() {
   return (
