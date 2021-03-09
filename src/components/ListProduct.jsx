@@ -9,17 +9,9 @@ export default function ListProduct() {
 
     const dispatch = useDispatch();
     const listProductByName = useSelector((state) => state.product.listProductByName);
-    console.log("me trae esto", listProductByName);
+    const listProduct = useSelector((state) => state.product.listProduct);
 
-    const listProduct = useSelector((state) => {
-        if ('' !== state.product.filterByCategory) {
-            return state.product.productFilterByCategory
-        }
-        if (listProductByName.length > 0) {
-            return listProductByName
-        }
-        return state.listProduct;
-    })
+    console.log("me trae esto", listProductByName);
 
     useEffect((query) => {
 
