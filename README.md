@@ -3,9 +3,9 @@
 ## Instalación
 
 ```
-git clone https://github.com/gmdreher/Ecommerce-Kitti-s-Shop.git
-npm install >> Ecommerce-Kitti-s-Shop/api/
-npm start >> Ecommerce-Kitti-s-Shop/api/
+git clone https:https://github.com/gmdreher/Free-Market.git
+npm install >> Free-Market/
+npm start >> Free-Market/
 ```
 
 ## Tecnologías utilizadas 
